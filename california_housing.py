@@ -100,5 +100,33 @@ def main():
     plt.grid(True, alpha=0.3)
     plt.show()
 
+    # Plot residuals
+    plt.figure(figsize=(12, 5))
+    
+    # BGD Residuals
+    plt.subplot(1, 2, 1)
+    residuals_bgd = y_test - y_pred_bgd
+    plt.scatter(y_pred_bgd, residuals_bgd, alpha=0.5, color='red', label='BGD')
+    plt.axhline(y=0, color='black', linestyle='--')
+    plt.xlabel('Predicted Values')
+    plt.ylabel('Residuals')
+    plt.title('BGD Residual Plot')
+    plt.legend()
+    plt.grid(True, alpha=0.3)
+    
+    # SGD Residuals
+    plt.subplot(1, 2, 2)
+    residuals_sgd = y_test - y_pred_sgd
+    plt.scatter(y_pred_sgd, residuals_sgd, alpha=0.5, color='green', label='SGD')
+    plt.axhline(y=0, color='black', linestyle='--')
+    plt.xlabel('Predicted Values')
+    plt.ylabel('Residuals')
+    plt.title('SGD Residual Plot')
+    plt.legend()
+    plt.grid(True, alpha=0.3)
+    
+    plt.tight_layout()
+    plt.show()
+
 if __name__ == "__main__":
     main() 
