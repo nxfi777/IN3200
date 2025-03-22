@@ -5,3 +5,7 @@ california_training_loss.png
 .gitignore
 Principles of Artificial Intelligence Coursework.docx
 california_residuals.png
+conf_matrix.png
+ROC.png
+svm_learning.png
+feature-importance.png
